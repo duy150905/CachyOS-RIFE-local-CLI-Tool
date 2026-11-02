@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rife-cli"
+version = "0.1.0"
+description = "Video workflows for CachyOS built on ffmpeg and AI tools (RIFE frame interpolation and more)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []            # standard library only
+classifiers = [
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.scripts]
+rife-cli = "rife_cli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["rife_cli*"]
